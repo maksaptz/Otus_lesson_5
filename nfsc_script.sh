@@ -3,7 +3,7 @@
 apt update # обновляем репозитории
 apt install -y nfs-common ufw # устанавливаем межсетевой экран и набор для nfs
 ufw default deny incoming # запрещаем все входящие соединения
-ufw default allow outgoing # разраешаем все исходящие соединения
+ufw default allow outgoing # разрешаем все исходящие соединения
 ufw allow ssh # открываем порт для ssh
 ufw allow proto udp from 192.168.50.10/32 to any port 2049 # открываем порт nfs
 ufw allow proto udp from 192.168.50.10/32 to any port 111 # открываем порт RPC Portmapper
